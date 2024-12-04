@@ -68,7 +68,7 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>connect-api</artifactId>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -129,54 +129,54 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <filters>
-                        <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>module-info.class</exclude>
-                                <exclude>org/apache/kafka</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                    <relocations>
-                        <relocation>
-                            <pattern>com.amazonaws.aws-java-sdk-sts</pattern>
-                            <shadedPattern>shaded.glue.com.amazonaws.aws-java-sdk-sts</shadedPattern>
-                        </relocation>
+<!--                    <filters>-->
+<!--                        <filter>-->
+<!--                            <artifact>*:*</artifact>-->
+<!--                            <excludes>-->
+<!--                                <exclude>module-info.class</exclude>-->
+<!--                                <exclude>org/apache/kafka</exclude>-->
+<!--                            </excludes>-->
+<!--                        </filter>-->
+<!--                    </filters>-->
+<!--                    <relocations>-->
+<!--&lt;!&ndash;                        <relocation>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <pattern>com.amazonaws.aws-java-sdk-sts</pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <shadedPattern>shaded.glue.com.amazonaws.aws-java-sdk-sts</shadedPattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </relocation>&ndash;&gt;-->
 
-                        <relocation>
-                            <pattern>software.amazon.awssdk</pattern>
-                            <shadedPattern>shaded.glue.software.amazon.awssdk</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.apache.commons</pattern>
-                            <shadedPattern>shaded.glue.org.apache.commons</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.apache.avro</pattern>
-                            <shadedPattern>shaded.glue.org.apache.avro</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.google.guava</pattern>
-                            <shadedPattern>shaded.glue.com.google.guava</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.fasterxml.jackson</pattern>
-                            <shadedPattern>shaded.glue.com.fasterxml.jackson</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>io.netty</pattern>
-                            <shadedPattern>shaded.glue.io.netty</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>software.amazon.eventstream</pattern>
-                            <shadedPattern>shaded.glue.software.amazon.eventstream</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>com.google.common</pattern>
-                            <shadedPattern>shaded.glue.com.google.common</shadedPattern>
-                        </relocation>
-                    </relocations>
+<!--&lt;!&ndash;                        <relocation>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <pattern>software.amazon.awssdk</pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <shadedPattern>shaded.glue.software.amazon.awssdk</shadedPattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </relocation>&ndash;&gt;-->
+<!--                        <relocation>-->
+<!--                            <pattern>org.apache.commons</pattern>-->
+<!--                            <shadedPattern>shaded.glue.org.apache.commons</shadedPattern>-->
+<!--                        </relocation>-->
+<!--&lt;!&ndash;                        <relocation>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <pattern>org.apache.avro</pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <shadedPattern>shaded.glue.org.apache.avro</shadedPattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </relocation>&ndash;&gt;-->
+<!--                        <relocation>-->
+<!--                            <pattern>com.google.guava</pattern>-->
+<!--                            <shadedPattern>shaded.glue.com.google.guava</shadedPattern>-->
+<!--                        </relocation>-->
+<!--                        <relocation>-->
+<!--                            <pattern>com.fasterxml.jackson</pattern>-->
+<!--                            <shadedPattern>shaded.glue.com.fasterxml.jackson</shadedPattern>-->
+<!--                        </relocation>-->
+<!--                        <relocation>-->
+<!--                            <pattern>io.netty</pattern>-->
+<!--                            <shadedPattern>shaded.glue.io.netty</shadedPattern>-->
+<!--                        </relocation>-->
+<!--                        <relocation>-->
+<!--                            <pattern>software.amazon.eventstream</pattern>-->
+<!--                            <shadedPattern>shaded.glue.software.amazon.eventstream</shadedPattern>-->
+<!--                        </relocation>-->
+<!--                        <relocation>-->
+<!--                            <pattern>com.google.common</pattern>-->
+<!--                            <shadedPattern>shaded.glue.com.google.common</shadedPattern>-->
+<!--                        </relocation>-->
+<!--                    </relocations>-->
                 </configuration>
                 <executions>
                     <execution>
